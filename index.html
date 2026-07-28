@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jalal Kheradmand — Backend Web Developer &amp; IT Support Specialist</title>
+<meta name="description" content="Backend web developer and IT support specialist. Python, Django, MySQL, and AI-assisted development. 13+ years supporting a UK web hosting business.">
+
+<!-- ========= Social preview (shows when the link is shared) =========
+     Replace the URL below if you use a custom domain. -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jalal Kheradmand — Backend Web Developer">
+<meta property="og:description" content="Python/Django backend developer with 13+ years on the technical side of web hosting.">
+<meta property="og:url" content="https://mrkheradmand.github.io">
+<meta name="twitter:card" content="summary">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy:#1f3864;
+  --navy-dark:#152747;
+  --navy-light:#2f5390;
+  --accent:#0f7b8a;
+  --ink:#1a1a1a;
+  --grey:#595959;
+  --grey-light:#8a8a8a;
+  --line:#e2e6ee;
+  --bg:#ffffff;
+  --bg-alt:#f6f8fb;
+  --radius:10px;
+  --maxw:960px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.65;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+a{color:var(--navy);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* ---------- nav ---------- */
+nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.brand{font-weight:700;color:var(--navy);letter-spacing:-.01em;font-size:1.02rem;white-space:nowrap}
+.navlinks{display:flex;gap:26px;flex-wrap:wrap}
+.navlinks a{color:var(--grey);font-size:.9rem;font-weight:500}
+.navlinks a:hover{color:var(--navy);text-decoration:none}
+@media(max-width:620px){.navlinks{gap:16px}.navlinks a{font-size:.82rem}.brand{font-size:.92rem}}
+@media(max-width:430px){.navlinks a:nth-child(2){display:none}}
+
+/* ---------- hero ---------- */
+header.hero{
+  background:linear-gradient(160deg,var(--navy) 0%,var(--navy-dark) 100%);
+  color:#fff;padding:76px 0 68px;
+}
+.hero h1{
+  font-size:clamp(2rem,5.5vw,3.1rem);font-weight:700;
+  letter-spacing:-.02em;line-height:1.12;margin-bottom:12px;
+}
+.hero .role{
+  font-size:clamp(1rem,2.5vw,1.22rem);font-weight:500;
+  color:#b9c8e4;margin-bottom:22px;
+}
+.hero p.intro{
+  max-width:640px;color:#dbe4f2;font-size:1.03rem;margin-bottom:30px;
+}
+.hero .meta{
+  display:flex;flex-wrap:wrap;gap:10px 22px;
+  font-size:.88rem;color:#a9bbd8;margin-bottom:30px;
+}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{
+  display:inline-block;padding:11px 22px;border-radius:var(--radius);
+  font-weight:600;font-size:.92rem;transition:.18s;border:1.5px solid transparent;
+}
+.btn:hover{text-decoration:none;transform:translateY(-1px)}
+.btn-solid{background:#fff;color:var(--navy)}
+.btn-solid:hover{background:#eaf0fa}
+.btn-ghost{border-color:#7d95c4;color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+
+/* ---------- sections ---------- */
+section{padding:64px 0;border-bottom:1px solid var(--line)}
+section.alt{background:var(--bg-alt)}
+.eyebrow{
+  font-size:.74rem;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:8px;
+}
+h2{
+  font-size:clamp(1.45rem,3.6vw,1.9rem);font-weight:700;
+  color:var(--navy);letter-spacing:-.015em;margin-bottom:22px;
+}
+h3{font-size:1.06rem;font-weight:600;color:var(--navy);margin-bottom:6px}
+p{margin-bottom:14px}
+p:last-child{margin-bottom:0}
+.lead{font-size:1.04rem;max-width:720px}
+.muted{color:var(--grey)}
+
+/* ---------- skills ---------- */
+.skillgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.skillcard{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px 22px;
+}
+.skillcard h3{display:flex;align-items:center;gap:9px;margin-bottom:10px;font-size:.98rem}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:2px}
+.tag{
+  font-family:'JetBrains Mono',ui-monospace,monospace;
+  font-size:.75rem;padding:3px 9px;border-radius:5px;
+  background:#eef2f9;color:var(--navy);border:1px solid #dce3f0;
+}
+
+/* ---------- projects ---------- */
+.projgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+.proj{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;display:flex;flex-direction:column;transition:.18s;
+}
+.proj:hover{border-color:var(--navy-light);box-shadow:0 6px 22px rgba(31,56,100,.09);transform:translateY(-2px)}
+.proj .num{
+  font-family:'JetBrains Mono',monospace;font-size:.74rem;
+  color:var(--grey-light);margin-bottom:8px;
+}
+.proj p{font-size:.93rem;color:var(--grey);flex:1;margin-bottom:14px}
+.proj .links{display:flex;gap:16px;margin-top:14px;font-size:.86rem;font-weight:600}
+.proj .links a{display:inline-flex;align-items:center;gap:5px}
+.placeholder{background:#fffdf3;border-color:#e8dfbe}
+.badge{
+  display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.07em;
+  text-transform:uppercase;color:#8a6d1f;background:#fdf3d4;
+  border:1px solid #eddba8;border-radius:4px;padding:2px 7px;margin-bottom:10px;
+}
+
+/* ---------- experience ---------- */
+.exp{border-left:2px solid var(--line);padding-left:22px;margin-left:4px}
+.job{position:relative;padding-bottom:26px}
+.job:last-child{padding-bottom:0}
+.job::before{
+  content:'';position:absolute;left:-28px;top:7px;
+  width:9px;height:9px;border-radius:50%;
+  background:var(--navy);border:2px solid #fff;box-shadow:0 0 0 2px var(--line);
+}
+.job .when{
+  font-family:'JetBrains Mono',monospace;font-size:.76rem;
+  color:var(--grey-light);margin-bottom:3px;
+}
+.job .where{font-size:.9rem;color:var(--grey);margin-bottom:6px}
+.job p{font-size:.93rem;color:var(--grey)}
+
+/* ---------- contact ---------- */
+.contactgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:6px}
+.ccard{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px 20px;
+}
+.ccard .label{
+  font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--grey-light);margin-bottom:5px;
+}
+.ccard .value{font-weight:600;color:var(--navy);word-break:break-word;font-size:.95rem}
+
+footer{padding:30px 0;text-align:center;color:var(--grey-light);font-size:.84rem}
+
+@media(max-width:600px){
+  header.hero{padding:56px 0 50px}
+  section{padding:48px 0}
+  .btn{width:100%;text-align:center}
+  .btns{gap:10px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <span class="brand">Jalal Kheradmand</span>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================ HERO ============================ -->
+<header class="hero">
+  <div class="wrap">
+    <h1>Jalal Kheradmand</h1>
+    <div class="role">Backend Web Developer &nbsp;·&nbsp; IT Support Specialist</div>
+    <p class="intro">
+      I build database-driven web applications in Python and Django, and I have spent
+      13+ years on the technical side of a web hosting business. That combination means
+      I debug fast, and I can explain what went wrong without the jargon.
+    </p>
+    <div class="meta">
+      <span>📍 Earth</span>
+      <span>🎓 MSc Technology Management</span>
+      <span>💼 Open to opportunities</span>
+    </div>
+    <div class="btns">
+      <!-- Put your CV PDF in the repo root and this link just works. -->
+      <a class="btn btn-solid" href="Kheradmand_CV.pdf">Download CV</a>
+      <a class="btn btn-ghost" href="https://github.com/mrkheradmand">GitHub</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/kheradmand/">LinkedIn</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============================ ABOUT ============================ -->
+<section id="about">
+  <div class="wrap">
+    <div class="eyebrow">About</div>
+    <h2>What I do</h2>
+    <p class="lead">
+      I have been building web applications since 2007 — first as a freelance PHP developer,
+      and now in Python and Django as co-founder of <strong>MassiveCoda</strong>, where I own the
+      backend: data modelling, business logic, integrations and the release cycle.
+    </p>
+    <p class="lead">
+      Alongside that, I have spent more than a decade at <strong>Subhosting</strong> on the support
+      desk — diagnosing real customer problems across servers, DNS, deployments and billing systems.
+      Living with production issues every day changes how you write code. You think harder about
+      failure states, logging, and the person who has to support the thing at 9am on a Monday.
+    </p>
+    <p class="lead">
+      Most recently I have been working on applying AI to development: integrating LLM APIs into
+      product features, and using AI coding assistants as a normal part of how I build and review code.
+    </p>
+  </div>
+</section>
+
+<!-- ============================ SKILLS ============================ -->
+<section id="skills" class="alt">
+  <div class="wrap">
+    <div class="eyebrow">Toolkit</div>
+    <h2>Skills &amp; technologies</h2>
+    <div class="skillgrid">
+
+      <div class="skillcard">
+        <h3><span class="dot"></span>Backend</h3>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">Django</span>
+          <span class="tag">PHP</span><span class="tag">Laravel</span>
+          <span class="tag">REST</span><span class="tag">OOP</span>
+        </div>
+      </div>
+
+      <div class="skillcard">
+        <h3><span class="dot"></span>Databases</h3>
+        <div class="tags">
+          <span class="tag">MySQL</span><span class="tag">Oracle PL/SQL</span>
+          <span class="tag">Schema design</span><span class="tag">Query tuning</span>
+        </div>
+      </div>
+
+      <div class="skillcard">
+        <h3><span class="dot"></span>AI &amp; Automation</h3>
+        <div class="tags">
+          <span class="tag">LLM APIs</span><span class="tag">Prompt engineering</span>
+          <span class="tag">Claude</span><span class="tag">Copilot</span><span class="tag">Cursor</span>
+        </div>
+      </div>
+
+      <div class="skillcard">
+        <h3><span class="dot"></span>Infrastructure</h3>
+        <div class="tags">
+          <span class="tag">Git</span><span class="tag">Docker</span>
+          <span class="tag">Linux</span><span class="tag">DNS</span>
+          <span class="tag">Deployment</span><span class="tag">cPanel</span>
+        </div>
+      </div>
+
+      <div class="skillcard">
+        <h3><span class="dot"></span>Front-End</h3>
+        <div class="tags">
+          <span class="tag">HTML5</span><span class="tag">CSS3</span>
+          <span class="tag">JavaScript</span><span class="tag">Responsive</span>
+        </div>
+      </div>
+
+      <div class="skillcard">
+        <h3><span class="dot"></span>Ways of working</h3>
+        <div class="tags">
+          <span class="tag">Agile</span><span class="tag">Product management</span>
+          <span class="tag">Incident triage</span><span class="tag">Customer support</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PROJECTS ============================
+     HOW TO EDIT: each card below is one project. Replace the title,
+     the paragraph, the tags and the two links. Delete the
+     <span class="badge"> line and remove class="placeholder" once a
+     card holds a real project. Delete any cards you do not need.
+     Keep the description to 2-3 sentences: what problem, what you built,
+     what it does for the user.
+================================================================= -->
+<section id="projects">
+  <div class="wrap">
+    <div class="eyebrow">Selected work</div>
+    <h2>Projects</h2>
+    <p class="lead muted" style="margin-bottom:26px">
+      A few things I have built. Each one links to the live version and the source.
+    </p>
+
+    <div class="projgrid">
+
+      <article class="proj placeholder">
+        <span class="badge">Replace me</span>
+        <div class="num">01</div>
+        <h3>[Project name]</h3>
+        <p>
+          One or two sentences on the problem this solves and who for. Then a sentence on
+          what you actually built — the interesting technical part, not a feature list.
+          Numbers help if you have them.
+        </p>
+        <div class="tags">
+          <span class="tag">Django</span><span class="tag">MySQL</span><span class="tag">Docker</span>
+        </div>
+        <div class="links">
+          <a href="#">↗ Live demo</a>
+          <a href="#">◆ Source code</a>
+        </div>
+      </article>
+
+      <article class="proj placeholder">
+        <span class="badge">Replace me</span>
+        <div class="num">02</div>
+        <h3>[Project name]</h3>
+        <p>
+          If you have anything using an LLM API, put it here — that is the card people
+          will read first. Say what the model does in the product and why that beat
+          the non-AI approach.
+        </p>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">LLM API</span><span class="tag">Django</span>
+        </div>
+        <div class="links">
+          <a href="#">↗ Live demo</a>
+          <a href="#">◆ Source code</a>
+        </div>
+      </article>
+
+      <article class="proj placeholder">
+        <span class="badge">Replace me</span>
+        <div class="num">03</div>
+        <h3>[Project name]</h3>
+        <p>
+          Client work counts, even old work. Describe what the client needed and what
+          you delivered. If it is no longer live, drop the demo link and keep the source one.
+        </p>
+        <div class="tags">
+          <span class="tag">PHP</span><span class="tag">Laravel</span><span class="tag">MySQL</span>
+        </div>
+        <div class="links">
+          <a href="#">↗ Live demo</a>
+          <a href="#">◆ Source code</a>
+        </div>
+      </article>
+
+      <article class="proj placeholder">
+        <span class="badge">Replace me</span>
+        <div class="num">04</div>
+        <h3>[Project name]</h3>
+        <p>
+          A small tool or script is fine here — something you built to solve your own
+          problem at Subhosting, for example. Reviewers like seeing that you automate
+          your own annoyances.
+        </p>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">Automation</span><span class="tag">Linux</span>
+        </div>
+        <div class="links">
+          <a href="#">↗ Live demo</a>
+          <a href="#">◆ Source code</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================ EXPERIENCE ============================ -->
+<section id="experience" class="alt">
+  <div class="wrap">
+    <div class="eyebrow">Background</div>
+    <h2>Experience</h2>
+    <div class="exp">
+
+      <div class="job">
+        <div class="when">Jan 2023 — Present</div>
+        <h3>Co-Founder &amp; Product Manager</h3>
+        <div class="where">MassiveCoda · Part-time</div>
+        <p>
+          Own product direction and the Django backend — data modelling, business logic,
+          integrations and releases. Run delivery on an Agile cycle and contribute to the front end.
+        </p>
+      </div>
+
+      <div class="job">
+        <div class="when">Dec 2012 — Present</div>
+        <h3>IT Support Technician &amp; Sales Representative</h3>
+        <div class="where">Subhosting</div>
+        <p>
+          First-line and escalation support across a live ticket queue and live chat — hosting,
+          domains, DNS, deployments and billing. Also handle pre-sales technical questions and
+          feed recurring issues back into process and documentation.
+        </p>
+      </div>
+
+      <div class="job">
+        <div class="when">2007 — 2010</div>
+        <h3>Freelance Web Developer &amp; Programmer</h3>
+        <div class="where">Tarhsaz Web Design and Programming Group</div>
+        <p>
+          Built dynamic, database-driven websites for commercial clients in PHP and MySQL,
+          owning the full cycle from requirements through design, build and testing.
+        </p>
+      </div>
+
+      <div class="job">
+        <div class="when">2010 — 2012</div>
+        <h3>MSc Technology Management &amp; BSc (Hons) Business Information Systems</h3>
+        <div class="where">University of East London</div>
+        <p>
+          MSc at Merit, BSc at Upper Second Class. Distinctions in Advanced Database Development,
+          Global Sustainable ICT Management and Multimedia Design.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CONTACT ============================ -->
+<section id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Get in touch</div>
+    <h2>Contact</h2>
+    <p class="lead muted">
+      Open to backend development and technical support roles. The quickest way to reach me
+      is LinkedIn.
+    </p>
+    <div class="contactgrid">
+      <div class="ccard">
+        <div class="label">Email</div>
+        <div class="value">-</div>
+      </div>
+      <div class="ccard">
+        <div class="label">LinkedIn</div>
+        <div class="value"><a href="https://www.linkedin.com/in/kheradmand/">linkedin.com/in/kheradmand/</a></div>
+      </div>
+      <div class="ccard">
+        <div class="label">GitHub</div>
+        <div class="value"><a href="https://github.com/mrkheradmand">github.com/mrkheradmand</a></div>
+      </div>
+      <div class="ccard">
+        <div class="label">Location</div>
+        <div class="value">Earth</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Built by Jalal Kheradmand · Hosted on GitHub Pages
+  </div>
+</footer>
+
+</body>
+</html>
